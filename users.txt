@@ -1,5 +1,2 @@
 kim 1234
-jiwon 1234
-sangwon 1234
-jiji 4343
-sharon 0000
+lee 2222

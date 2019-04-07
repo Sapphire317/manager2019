@@ -20,7 +20,6 @@ int main(int argc, char* argv[]) {
 }
 
   while(1){
-    if(is_login==0) is_login = login(userlist, count);
     menu_id = ask_menu(is_login); // 현재 로그인 되었는지의 여부를 파라미터로 알려야 한다.
     if(menu_id==1) {
 	if(join(userlist, count)>0) count++;
@@ -29,12 +28,10 @@ int main(int argc, char* argv[]) {
     else if (menu_id==3) logout(&is_login);
     else if (menu_id==4) list(userlist, count);
     else if (menu_id==0) {
-	printf("Exit Program!\n");
 	break;
 	}
     else{
-	printf("Error : Wrong command!\n");
-	break;	
+	printf("No such command!!\n");
     }
   }
   save_file(userlist, count, argv[1]);
